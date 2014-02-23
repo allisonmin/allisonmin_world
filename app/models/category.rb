@@ -3,4 +3,7 @@ class Category < ActiveRecord::Base
   
   scope :active, where('active = ?', true)
   scope :alphabetical, order('name')
+
+    # Relationships
+  	has_many :articles
 end
